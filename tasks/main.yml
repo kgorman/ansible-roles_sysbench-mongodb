@@ -1,0 +1,21 @@
+---
+# tasks file for ansible-roles_sysbench-mongodb
+
+# install git
+- yum: name=git state=latest
+
+# install java
+- yum: name=java-1.6.0-openjdk-devel.x86_64 state=latest
+
+# start fresh
+- command: rm -rf /root/sysbench/
+# get the source code
+- git: repo=https://github.com/kgorman/sysbench-mongodb.git dest=/root/sysbench
+
+# get the binaries
+- name: download Mongodb java driver 2.11.4
+  get_url: url=http://central.maven.org/maven2/org/mongodb/mongo-java-driver/2.11.4/mongo-java-driver-2.11.4.jar dest=/root/sysbench mode=0440
+
+# copy in a new bash script with variables
+- name: Create the startup file
+  template: src=run.simple.bash.j2 dest=/root/sysbench/run.simple.bash mode=0655
