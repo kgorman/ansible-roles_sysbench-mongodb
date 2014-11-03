@@ -12,9 +12,9 @@ platforms:
  - name: GenericUNIX
    versions:
    - all
- categories:
+categories:
  - system
  - cloud:rax
  - database
  - database:nosql
- dependencies: []
+dependencies: []

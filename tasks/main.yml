@@ -3,6 +3,8 @@
 
 # install git
 - yum: name=git state=latest
+- yum: name=python-pip state=latest
+- pip: name=pymongo
 
 # install java
 - yum: name=java-1.6.0-openjdk-devel.x86_64 state=latest
@@ -19,3 +21,6 @@
 # copy in a new bash script with variables
 - name: Create the startup file
   template: src=run.simple.bash.j2 dest=/root/sysbench/run.simple.bash mode=0655
+
+# create the initial db user for the test
+- mongodb_user: database={{ sysbench_mongodb_database }} user={{ sysbench_mongodb_username }} password={{ sysbench_mongodb_password }} login_host={{ sysbench_mongodb_host }} login_user={{ mongodb_admin_user }} login_password={{ mongodb_admin_pass }} login_port={{ sysbench_mongodb_port }} state=present

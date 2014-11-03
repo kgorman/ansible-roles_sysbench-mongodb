@@ -2,22 +2,26 @@
 # defaults file for ansible_roles-sysbench-mongodb
 
 # username for test to log in as
-sysbench-mongodb_username: dba
+sysbench_mongodb_username: sbtest
 
 # password for test to log in as
-sysbench-mongodb_password: dba
+sysbench_mongodb_password: sbtest
 
 # host for test to connec to
-sysbench-mongodb_host: localhost
+sysbench_mongodb_host: 104.130.20.53
 
 # port for test to connect to
-sysbench-mongodb_port: 27017
+sysbench_mongodb_port: 9005
 
 # database name to use
-sysbench-mongodb_database: sbtest
+sysbench_mongodb_database: sbtest
 
 # size of documents per collection
 sysbench-mongodb_number_of_docs_per_collection: 100000000
 
 # number of collections
 sysbench-mongodb_number_of_collections: 16
+
+# DB admin
+mongodb_admin_pass: dba
+mongodb_admin_user: dba
