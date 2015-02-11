@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Kenny Gorman
-  description: installs and configures sysbench-mongodb. Sysbench-mongodb can be used to benchmark MongoDB and TokuMX systems.
+  description: installs and configures sysbench-mongodb. Sysbench-mongodb can be used to benchmark MongoDB as well as TokuMX and various MongoDB DBaaS vendors
   company: Rackspace US Inc.
   license: BSD
   min_ansible_version: 1.2
