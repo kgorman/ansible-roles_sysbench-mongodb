@@ -1,20 +1,20 @@
 ---
 galaxy_info:
   author: Kenny Gorman
-  description: installs and configures sysbench-mongodb. Sysbench-mongodb can be used to benchmark MongoDB as well as TokuMX and various MongoDB DBaaS vendors
+  description: Configurable load testing system for MongoDB and variants. Works with DBaaS services as well.
   company: Rackspace US Inc.
   license: BSD
   min_ansible_version: 1.2
-platforms:
- - name: EL
-   versions:
-   - all
- - name: GenericUNIX
-   versions:
-   - all
-categories:
- - system
- - cloud:rax
- - database
- - database:nosql
-dependencies: []
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: GenericUNIX
+    versions:
+    - all
+  categories:
+  - system
+  - cloud:rax
+  - database
+  - database:nosql
+  dependencies: []
