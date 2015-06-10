@@ -37,3 +37,6 @@ sysbench_num_loader_threads: 8
 
 # number of threads for execute
 sysbench_num_writer_threads: 64
+
+# version of java driver to use
+sysbench_java_driver_version: 2.13.2

@@ -17,7 +17,7 @@
 
 # get the binaries
 - name: download Mongodb java driver
-  get_url: url=http://central.maven.org/maven2/org/mongodb/mongo-java-driver/2.13.0-rc2/mongo-java-driver-2.13.0-rc2.jar dest=/root/sysbench mode=0440
+  get_url: url=http://central.maven.org/maven2/org/mongodb/mongo-java-driver/{{sysbench_java_driver_version}}/mongo-java-driver-{{sysbench_java_driver_version}}.jar dest=/root/sysbench mode=0440
 
 # copy in a new bash config with variables
 - name: Create the config file
@@ -31,4 +31,4 @@
   args:
     chdir: /root/sysbench/
   environment:
-    classpath: /root/sysbench; /root/sysbench/mongo-java-driver-2.13.0-rc2.jar
+    classpath: /root/sysbench; /root/sysbench/mongo-java-driver-{{sysbench_java_driver_version}}.jar
